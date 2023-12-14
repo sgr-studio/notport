@@ -1,0 +1,43 @@
+<div class="container">
+	<p><input type="checkbox" id="checkbox1" name="fruits" value="apple">
+	<label for="checkbox1">Apple</label></p>
+	<p><input type="checkbox" id="checkbox2" name="fruits" value="banana">
+	<label for="checkbox2">Banana</label></p>
+	<p><input type="checkbox" id="checkbox3" name="fruits" value="pine">
+	<label for="checkbox3">Pine</label></p>
+</div>
+
+<p id="output"></p>
+<style>
+  body {
+  padding: 0;
+  margin: 10px;
+}
+
+p {
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  padding: 10px;
+}
+
+input[type=checkbox] {
+  transform: scale(2);
+  margin: 0 15px 0 0;
+}
+</style>
+<script>
+  let targets = document.querySelectorAll(`input[type='checkbox'][name='fruits']`);
+
+for (let target of targets) {
+  target.addEventListener(`change`, () => {
+    if (target.checked) {
+      document.querySelector(`#output`).innerHTML = `<style>body{background: #333; color: white;}</style>`;
+    } else {
+      document.querySelector(`#output`).innerHTML = ``;
+    }
+  })
+}
+</script>

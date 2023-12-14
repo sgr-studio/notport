@@ -1,0 +1,62 @@
+<style>
+    [data-filter-view]:not([data-filter-view=""]) [data-filter-key] {
+        display: none;
+    }
+    [data-filter-view][data-filter-view~="貝類"] [data-filter-key="貝類"],
+    [data-filter-view][data-filter-view~="光物"] [data-filter-key="光物"],
+    [data-filter-view][data-filter-view~="白身"] [data-filter-key="白身"],
+    [data-filter-view][data-filter-view~="赤身"] [data-filter-key="赤身"] {
+        display: block;
+    }
+    </style>
+    
+    <div class="filter" id="js-filter">
+    <ul class="filter-cond">
+    <li><label><input type="checkbox" value="貝類">貝類</label></li>
+    <li><label><input type="checkbox" value="光物">光物</label></li>
+    <li><label><input type="checkbox" value="白身">白身</label></li>
+    <li><label><input type="checkbox" value="赤身">赤身</label></li>
+    <!-- /.filter-cond --></ul>
+    
+    <ul class="filter-items">
+    <li data-filter-key="貝類">つぶ貝</li>
+    <li data-filter-key="白身">カンパチ</li>
+    <li data-filter-key="赤身">マグロ</li>
+    <li data-filter-key="光物">コハダ</li>
+    <li data-filter-key="貝類">バイ貝</li>
+    <li data-filter-key="白身">マダイ</li>
+    <li data-filter-key="貝類">サザエ</li>
+    <!-- /.filter-items --></ul>
+    <!-- /#js-filter--></div>
+    <script>
+      var widget = document.getElementById('js-filter');
+  var checkboxes = widget.querySelectorAll('.filter-cond input[type="checkbox"]');
+  var checkedList = [];
+  var i = 0;
+  var leng = 0;
+  var filter = function () {
+      checkedList = [];
+  
+      i = 0;
+      leng = checkboxes.length;
+  
+      for (i; i < leng; i++) {
+          if (checkboxes[i].checked) {
+              checkedList.push(checkboxes[i].value);
+          }
+      }
+  
+      widget.setAttribute('data-filter-view', checkedList.join(' '));
+  };
+  
+  
+  i = 0;
+  leng = checkboxes.length;
+  
+  for (i; i < leng; i++) {
+      checkboxes[i].addEventListener('change', filter);
+  }
+    </script>
+  
+  <form method="post" action="">  <label for="input_name">名前：</label>  <input type="text" id="input_name" name="input_name" value=""></form>
+  

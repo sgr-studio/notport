@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="Logo.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公式｜notPort - 対応言語</title>
+    <link rel="icon" href="Logo.ico"> 
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="fixed">
+    <div class="center">
+        <div><img src="notPort.png" alt="Logo" class="logo"><span style="color: white; font-size: 10px; padding-left: 5px;">ver 3.0.14</span></div>
+        <div class="app"><i class="material-icons app_ui open-button" id="open-button">menu</i></div>
+    </div>
+</header>
+<div class="main" style="padding-top: 100px;">
+    <h4 style="text-align: center; font-size: 30px; ">対応言語</h4>
+    <p style="text-align: center; font-size: 15px; ">Supported language</p>
+    <div class="pad"></div>
+    <div class="center">
+        <div class="contents_list">
+            <h1 class="_titleEffect2">日本語</h1>
+            <div class="list-border">
+                <div class="pad">
+                    <p class="centernal">デフォルト</p>
+                    <p class="centernal">標準の言語です</p>
+                    <div class="pad2"></div>
+                    <p class="centernal"></p>
+                </div>
+            </div>
+        </div>
+        <div class="contents_list">
+            <h1 class="_titleEffect2">English</h1>
+            <div class="list-border">
+                <div class="pad">
+                    <p class="centernal">2nd language</p>
+                    <p class="centernal">(Coming Soon)</p>
+                    <div class="pad2"></div>
+                    <p class="centernal"></p>
+                </div>
+            </div>
+        </div>
+        <div class="contents_list">
+            <h1 class="_titleEffect2">中国人</h1>
+            <div class="list-border">
+                <div class="pad">
+                    <p class="centernal">第三语言</p>
+                    <p class="centernal">需要时间来回应</p>
+                    <div class="pad2"></div>
+                    <p class="centernal"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul id="messages"></ul>
+</div>
+<div class="main">
+    <div class="contents" style="padding-bottom: 200px;">
+        <p style="text-align: center; padding-bottom: 60px;">言語対応には莫大な労力がかかります</p>
+        <p style="text-align: center; padding-bottom: 60px;">翻訳などに協力してくれると専用のバッチを送ります</p>
+    </div>
+</div>
+<footer>
+    <div class="under">
+        <div class="logoFooter" style="padding-right: 0px;">
+            <a href="top.html" style="padding: 0; margin: 0; background: #00000000;"><img src="notPort.png" alt="notPort" style="width: 150px; padding-left: 0px;"></a>
+            <div style="display: flex; margin: 0 auto; padding-right: 0px;">
+                <div>
+                    <h5>利用について</h5>
+                    <a href="service.html">サービスの目的</a>
+                    <a href="howtouse.html">使い方</a>
+                    <a href="languages.html">対応言語</a>
+                </div>
+                <div style="padding-right: 0px;">
+                    <h5>サービスについて</h5>
+                    <a href="developer.html">開発元</a>
+                    <a href="admins.html">運営者</a>
+                    <a href="origin.html">成り立ち</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h6 style="text-align: center; padding: 15px; color: white;">このサイトは SGR Studio によって運営されています</h6>
+</footer>
+<link rel="stylesheet" href="top.css">
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-4/js/5-4.js"></script>
+<script src="client.js"></script>
+<div style="display: none;">
+    <p id="userID-show"></p>
+    <form action="#" id="chatForm">
+        <input id="u" autocomplete="off" placeholder="ユーザ名" maxlength="15" value="名無しさん"/>
+        <input id="ai" autocomplete="off" placeholder="AccountID"/>
+        <input id="now" class="nowTime" autocomplete="off" placeholder="now"/>
+        <!-- <input id="mark" autocomplete="off" value="1"/> -->
+        <!-- <input id="m" autocomplete="off" placeholder="テキスト"/> -->
+        <label id="mtext"><textarea name="m" id="m" cols="20" rows="1" placeholder="テキスト" maxlength="5000"></textarea></label>
+        <button>Send</button>
+        </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+      <meta http-equiv="content-type" content="text/html charset=UTF-8">
+        <html lang="ja">
+        <title>パソコン版</title>
+        <link rel="icon" href="Logo.ico"> 
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  </head>
+<body>
+<header class="fixed">
+    <div class="center">
+        <div><img src="notPort.png" alt="Logo" class="logo"><span style="color: white; font-size: 10px; padding-left: 5px;">ver 3.0.14</span></div>
+        <div class="app"><i class="material-icons app_ui open-button" id="open-button">menu</i></div>
+    </div>
+</header>
+<div class="center main">
+    <div class="Menu">
+        <div class="UI">
+            <!-- <img src="/ads/0001.webp" alt="Ads" class="ads"> -->
+            <div style="padding: 10px; display: flex; padding-top: 20px;">
+                <img src="icon2.png" alt="アカウント" style="width: 30px;">
+                <h2 style="line-height: 30px; margin-left: 5px;">[Guest]</h2>
+            </div>
+            <div style="padding-left: 10px; padding-bottom: 10px;">
+                <p id="_whereiam">現在位置: 読み込み中</p>
+            </div>
+            <label for="pop-up">
+              <h3 id="settings openButtonSet"><i class="material-icons _ui">settings</i>設定</h3>
+            </label>
+            <a href="howtouse.html" style="text-decoration: none;" target="_blank" rel="noopener noreferrer">
+              <h3 id="help"><i class="material-icons _ui">help</i>使い方</h3>
+            </a>
+            <details>
+              <summary><h3 class="_serverlist"><i class="material-icons _ui">expand_more</i>Webツール</h3></summary>
+              <!-- <summary><h3 class="_serverlist"><i class="material-icons _ui">build</i>Webツール</h3></summary> -->
+              <div id="webtoolkit">
+                <a href="http://hinata.la.coocan.jp/tool/tategaki.cgi" target="_blank" rel="noopener noreferrer"><h3 class="_webtoolkitlink _idR1"><i class="material-icons _ui">edit_note</i>縦書き変換</h3></a>
+                <a href="https://aa.kaomoji-copy.com/menu/" target="_blank" rel="noopener noreferrer"><h3 class="_webtoolkitlink _idR2"><i class="material-icons _ui">attach_file</i>AA一覧</h3></a>
+                <a href="https://www.deepl.com/ja/translator" target="_blank" rel="noopener noreferrer"><h3 class="_webtoolkitlink _idR3"><i class="material-icons _ui">translate</i>翻訳</h3></a>
+                <a href="https://memo.onl.jp/" target="_blank" rel="noopener noreferrer"><h3 class="_webtoolkitlink _idRS"><i class="material-icons _ui">book</i>メモ</h3></a>
+              </div>
+            </details>              
+            <details>
+                <summary><h3 class="_serverlist"><i class="material-icons _ui">expand_more</i>サーバー</h3></summary>
+                <!-- <summary><h3 class="_serverlist"><i class="material-icons _ui">login</i>サーバー</h3></summary> -->
+                <div id="rooms">
+                    
+                    <label><input type="radio" name="login_rooms"><h3 class="_roomlink _idR1"><i class="material-icons _ui">meeting_room</i>Room 1</h3></input></label>
+                    <label><input type="radio" name="login_rooms"><h3 class="_roomlink _idR2"><i class="material-icons _ui">meeting_room</i>Room 2</h3></input></label>
+                    <label><input type="radio" name="login_rooms"><h3 class="_roomlink _idR3"><i class="material-icons _ui">meeting_room</i>Room 3</h3></input></label>
+                    <label><input type="radio" name="login_rooms" checked><h3 class="_roomlink _idRS"><i class="material-icons _ui">meeting_room</i>SnapShot</h3></input></label>
+                </div>
+              </details>              
+            <!-- <h3 class="arrow sample5-2"><i class="material-icons _ui">settings</i>設定</h3>
+            <h3 class="arrow sample5-2"><i class="material-icons _ui">login</i>サーバ</h3> -->
+            <!-- <a href="#" class="arrow sample5-2">共通のHTML</a> -->
+        </div>
+    </div>
+
+    <!-- メニュー -->
+    <!-- <div class="modal-overlay closed" id="modal-overlay"></div> -->
+    <div class="modal closed" id="modal">
+      <!-- <button class="close-button" id="close-button">閉じる</button> -->
+      <div class="modal-guts">
+        <!-- <h4>ポップアップウィンドウ</h4>
+        <p>この窓が表示されている間は窓の外の操作はできません。ウィンドウを閉じて操作して下さい。</p> -->
+        <header class="fixed" id="popup">
+            <div class="center">
+                <div><img src="notPort.png" alt="Logo" class="logo"><span style="color: white; font-size: 10px; padding-left: 5px;"></span></div>
+                <div class="app2"><i class="material-icons app_ui open-button" id="close-button">close</i></div>
+            </div>
+        </header>
+        <div style="padding-top: 80px;">
+            <div class="_menu_center">
+                <h2>メニュー</h2>
+                <ul>
+                    <li id="UI_btn"><i class="material-icons _ui2">settings</i>設定</li>
+                    <li id="UI_btn"><i class="material-icons _ui2">help</i>使い方</li>
+                </ul>
+                <h2>サーバー</h2>
+                <ul>
+                    <li id="UI_btn _idR1"><i class="material-icons _ui2">meeting_room</i>Room 1</li>
+                    <li id="UI_btn _idR2"><i class="material-icons _ui2">meeting_room</i>Room 2</li>
+                    <li id="UI_btn _idR3"><i class="material-icons _ui2">meeting_room</i>Room 3</li>
+                    <li id="UI_btn _idRS"><i class="material-icons _ui2">meeting_room</i>SnapShot</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 設定 -->    
+    <input type="checkbox" id="pop-up">
+    <div class="overlay">
+      <div class="window">
+        <label class="close" for="pop-up"><div class="app3"><i class="material-icons app_ui">close</i></div></label>
+        <h2 class="menutitle">設定</h2>
+        <div class="scroll_area">
+          <hr>
+          <h4>アカウント設定</h4>
+          <div style="display: flex;">
+            <img src="icon.png" alt="LOGO" style="width: 35px; height: 35px; padding-right: 5px;">
+            <div>
+              <p id="userID-show">現在のID: 読み込み中</p>
+              <p id="_whereiam-show">現在位置: 読み込み中</p>
+            </div>
+          </div>
+          <h4>サイトの設定</h4>
+          <div class="cp_ipcheck">
+            <input type="checkbox" id="c_ch1" name="theme" checked />
+            <label for="c_ch1">ダークモード</label>
+            <!-- <input type="checkbox" id="c_ch2" />
+              <label for="c_ch2">イヌ</label>
+              <input type="checkbox" id="c_ch3" />
+              <label for="c_ch3">ウサギ</label> -->
+            </div>
+          </div>
+          
+      </div>
+    </div>
+    
+    <!-- テーマ -->
+    <div id="output"></div>
+
+   <div class="TimeLine">
+       
+       <!-- メッセージ入力欄 -->
+       <form action="#" id="chatForm">
+           <input id="u" autocomplete="off" placeholder="ユーザ名" maxlength="15" value="名無しさん"/>
+           <input id="ai" autocomplete="off" placeholder="AccountID"/>
+           <input id="now" class="nowTime" autocomplete="off" placeholder="now"/>
+           <!-- <input id="mark" autocomplete="off" value="1"/> -->
+           <!-- <input id="m" autocomplete="off" placeholder="テキスト"/> -->
+           <label id="mtext"><textarea name="m" id="m" cols="20" rows="1" placeholder="テキスト" maxlength="5000"></textarea></label>
+           <button>Send</button>
+          </form>
+          
+          <!-- メッセージの表示 -->
+          <ul id="messages"></ul>
+        </div>
+      </div>
+
+<!--必須モジュール２つ-->
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="client.js"></script>
+<!-- <script>
+  var socket = io();
+  //var userName = 'test';
+  $(function () {
+var userName = '';
+    // メッセージを送信する
+    $('form').submit(function(){
+      socket.emit('chat message', $('#m').val(), $('#u').val());
+      $('#m').val('');
+      return false;
+    });
+
+    // 受信したメッセージを表示
+    // ul id ="messages"の部分
+    socket.on('chat message', function(data){
+      var chat = data.userName + " 『 " + data.message + " 』";
+      if ((data.message != '') && (data.userName != '') ) {//空じゃない場合
+      $('#messages').append($('<p id="chat">').text(chat));//ユーザとテキストは前提条件
+      }
+    });
+  });
+</script> -->
+
+<!-- <textarea id="before" rows="8"></textarea>
+<textarea id="after" rows="8"></textarea>
+
+<script>
+let before = document.getElementById('before');
+let after = document.getElementById('after');
+before.oninput = inputText;
+function inputText(e){
+  after.innerHTML = e.target.value.replace(/\n/g, '<br>');
+}
+</script> -->
+<script>
+// テキストエリアの拡張処理
+function afeed(element){
+  if(element.tagName == 'TEXTAREA'){
+
+    // 行の高さとpadding値を取得する。IEやSafariなど、ブラウザによって必要な関数が異なるので、orで３パターン分取れるようにしてある。
+    var stylelists = window.getComputedStyle(element, null) || element.currentStyle || document.defaultView.getComputedStyle(element, '');
+
+    var line_height = stylelists.getPropertyValue('line-height').replace(/px/g , "");
+    var line_length;
+
+    var firstheight = Number(element.offsetHeight) - stylelists.getPropertyValue('padding-top').replace(/px/g , "") - stylelists.getPropertyValue('padding-top').replace(/px/g , "");
+
+    var result_height;
+
+    element.style.height = firstheight + 'px';
+    element.style.resize = 'none';
+
+    element.addEventListener('input', function(){
+
+      // 改行文字の個数を取得
+      if(element.value.match(/\n/g) === null){
+        line_length = 0;
+      }else{
+        line_length = element.value.match(/\n/g).length;
+      }
+
+      // 見栄えの関係上、１つ以上改行があるときは文字のすぐ下に枠が来るようにする
+      if(line_length === 0){
+        result_height = firstheight;
+      }else{
+        result_height = ((line_length - 1) * line_height) + firstheight;
+      }
+      element.style.height = result_height + 'px';
+    }, false);
+  }else{
+    console.log('Error: テキストエリアでないものに対して適用されています。');
+  }
+}
+
+var textarea = document.querySelector('#mtext textarea');
+afeed(textarea);
+
+</script>
+<script src="gimmick.js"></script>
+<script>
+  // theme
+  let targets = document.querySelectorAll(`input[type='checkbox'][name="theme"]`);
+
+  for (let target of targets) {
+    target.addEventListener(`change`, () => {
+      if (target.checked) {
+        document.querySelector(`#output`).innerHTML = ``;
+        // alert("TRUE");
+      } else {
+        // alert("FALSE");
+        document.querySelector(`#output`).innerHTML = `<style>body{background: #white; color: black;}</style>`;
+      }
+    })
+  }
+</script>
+</body>
+</html>

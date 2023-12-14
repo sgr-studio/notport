@@ -1,0 +1,201 @@
+* {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+@media screen and (max-width:1000px) {
+  .ImageTop {
+    display: none;
+  }
+  .textTop {
+    text-align: center;
+    margin: 0 auto;
+    width: 200px;
+  }
+
+  a {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  ._titleEffect {
+    margin: 0 auto;
+  }
+
+  .contents {
+    text-align: center;
+  }
+
+  .logoFooter {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width:1001px) {
+  .ImageTop {
+    display: flex;
+  }
+  .textTop {
+    text-align: left;
+  }
+
+  ._titleEffect {
+    margin: 0px;
+  }
+}
+
+p {
+  color: white;
+}
+
+.pad {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.pad2 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+.pad2 p {
+  padding-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin-top: 15px;
+  padding: 15px;
+  width: 120px;
+  text-align: center;
+  background-color: white;
+  z-index: -999999999;
+}
+
+h2 {
+  color: white;
+}
+
+h4 {
+  color: white;
+}
+
+.main {
+  background-color: #040404;
+  padding: 15px;
+}
+
+.contents {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+
+.contents_list {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.contents_list2 {
+  width: 180px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.list-border {
+  border: white solid 1px;
+  border-radius: 15px;
+}
+
+i {
+  color: white;
+}
+
+._titleEffect {
+  text-align: center;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 150px;
+  position: relative;
+  bottom: 10px;
+  display: block;
+}
+
+._titleEffect2 {
+  text-align: center;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100px;
+  position: relative;
+  bottom: 10px;
+  display: block;
+  font-size: 25px;
+  margin: 0 auto;
+}
+
+hr {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-color: white;
+}
+.notURL {
+  text-align: center;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  background: #04040400;
+  z-index: 99999;
+  width: auto;
+}
+
+footer {
+  background: #2a2a2a;
+}
+
+.under {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+}
+
+.under div {
+  padding-right: 15px;
+}
+
+.logoFooter img {
+  padding: 20px;
+}
+
+h5 {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+}
+
+.join {
+  background-color: #00a558;
+  color: white;
+  margin: 0 auto
+}
+
+.centernal {
+  text-align: center;
+}
